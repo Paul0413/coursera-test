@@ -2,21 +2,21 @@
     box-sizing: border-box;
 }
 /* base style*/
-@media screen (min-width: 992px;) {
+
     div.grid{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 120px repeat(2,1fr);
+        grid-template-rows: 120px repeat(4,1fr);
         grid-gap: 10px;
         grid-template-areas:
         "h1 h1 h1 h1 h1 h1"
         "ch ch beef beef sushi sushi";
         padding: 10px;
     }
-}
+
 
 /* table view */
-@media screen (min-width: 768px;) (max-width: 991px) {
+@media screen  and (min-width: 768px) and (max-width: 991px) {
     div.grid{
         grid-template-areas:
         "h1 h1 h1 h1 h1 h1"
@@ -27,12 +27,12 @@
 }
 
 /* mobile view */
-@media screen (min-width: 767px;) {
+@media screen and (max-width: 767px) {
     div.grid{
         grid-template-areas:
         "h1 h1 h1 h1 h1 h1"
         "ch ch ch ch ch ch"
-        "beef beef beef beef beef beef beef"
+        "beef beef beef beef beef beef"
         "sushi sushi sushi sushi sushi sushi";
         padding: 10px;
     }
