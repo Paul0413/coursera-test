@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+/* base style*/
+@media screen (min-width: 992px;) {
+    div.grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 120px repeat(2,1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+        "h1 h1 h1 h1 h1 h1"
+        "ch ch beef beef sushi sushi";
+        padding: 10px;
+    }
+}
+
+/* table view */
+@media screen (min-width: 768px;) (max-width: 991px) {
+    div.grid{
+        grid-template-areas:
+        "h1 h1 h1 h1 h1 h1"
+        "ch ch ch beef beef beef"
+        "sushi sushi sushi sushi sushi sushi";
+        padding: 10px;
+    }
+}
+
+/* mobile view */
+@media screen (min-width: 767px;) {
+    div.grid{
+        grid-template-areas:
+        "h1 h1 h1 h1 h1 h1"
+        "ch ch ch ch ch ch"
+        "beef beef beef beef beef beef beef"
+        "sushi sushi sushi sushi sushi sushi";
+        padding: 10px;
+    }
+}
+
+div h1{
+    text-align: center;
+    grid-area: h1;
+    align-self: center;
+}
+
+section.chicken{
+    display: grid;
+    grid-area: ch;
+    background-color: gray;
+    border: 3px black solid;
+}
+
+.chicken h3{
+    margin: 0px;
+    height: 30px;
+    width: 100px;
+    justify-self: right;
+    text-align: center;
+    border: 2px black solid;
+    background-color: rgb(224, 147, 149);
+}
+
+.chicken article{
+    padding: 20px;
+    margin-top: -15px;
+}
+
+section.beef{
+    display: grid;
+    grid-area: beef;
+    background-color: gray;
+    border: 3px black solid;
+}
+
+.beef h3{
+    margin: 0px;
+    height: 30px;
+    width: 100px;
+    justify-self: right;
+    text-align: center;
+    border: 2px black solid;
+    background-color: rgb(210, 47, 53);
+    color: white;
+}
+
+.beef article{
+    padding: 20px;
+    margin-top: -15px;
+}
+
+section.sushi{
+    display: grid;
+    grid-area: sushi;
+    background-color: gray;
+    border: 3px black solid;
+}
+
+.sushi  h3{
+    margin: 0px;
+    height: 30px;
+    width: 100px;
+    justify-self: right;
+    text-align: center;
+    border: 2px black solid;
+    background-color: rgb(231, 211, 148);
+}
+
+.sushi article{
+    padding: 20px;
+    margin-top: -15px;
+}
