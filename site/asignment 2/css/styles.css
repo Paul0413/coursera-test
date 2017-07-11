@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Header */
+#header-nav{
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 0;
+}
+.navbar-default .navbar-toggle{
+    border:1.5px solid black;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: black;
+    height: 2.5px;
+    margin-bottom: -1.5px;
+}
+
+#navbar-collapse{
+    background-color: white;
+    padding: 0;
+}
+
+.navbar-nav{
+    margin: 0;
+}
+.navbar-nav>li{
+    border:1px solid black;
+}
+.navbar-default .navbar-nav>li>a{
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+#header-nav .navbar-brand{
+    color: black;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+/* End Header */
+
+/* Main content */
+h1{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+div.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin: 15px;
+
+}
+div>div{
+    background-color: grey;
+}
+div>div>p{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/* End Main content */
+
+/* Media queries */
+
+/******** tablet size ********/
+@media screen and (max-width: 992px) {
+    div.grid-container{
+        grid-template: repeat(2,1fr) / repeat(2,1fr);
+    }
+    .Sushi{
+        grid-column:1/-1;
+        height: fit-content;
+    }
+}
+
+/******** mobile size ********/
+@media screen and (max-width: 767px) {
+    div.grid-container{
+        grid-template: repeat(3,1fr) / 1fr ;
+    }
+}
